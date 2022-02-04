@@ -1,0 +1,7 @@
+:root {
+  --projects-hero: url('../img/projects-hero.jpg');
+}
+
+.hero-projects {
+  background-image: var(--projects-hero);
+}

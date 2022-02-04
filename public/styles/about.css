@@ -1,0 +1,49 @@
+
+:root {
+  --about-hero: url('../img/about-hero.jpg');
+  --about-hero-glitch-0: url('../img/about-hero-glitch.png');
+  --about-hero-glitch-1: url('../img/about-hero-glitch1.png');
+}
+
+@keyframes "glitch" {
+  from, to {
+    background-image: var(--about-hero);
+  }
+  89% {
+    background-image: var(--about-hero);
+  }
+  90% {
+    background-image: var(--about-hero-glitch-0);
+  }
+  91% {
+    background-image: var(--about-hero);
+  }
+  97% {
+    background-image: var(--a
+      bout-hero-glitch-0);
+  }
+  99% {
+    background-image: var(--about-hero-glitch-1);
+  }
+}
+
+.hero-about {
+  height: 60vh !important;
+  background-image: var(--about-hero);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  animation: 4s glitch 2;
+}
+
+.hero-about h1 {
+  padding: 0 30px 0 10px;
+  top: 100px !important;
+  right: 55% !important;
+  background-color: var(--bg);
+}
+
+.hero-about h1::after {
+  right: 0 !important;
+}

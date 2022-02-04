@@ -1,0 +1,8 @@
+
+:root {
+  --blog-hero: url('../img/blog-hero.jpg');
+}
+
+.hero-blog {
+  background-image: var(--blog-hero);
+}

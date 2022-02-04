@@ -16,7 +16,8 @@ app.engine('hbs', handlebars.engine({
 }));
 
 app.use(express.static('public'));
-app.use(favicon('./public/favicon-32x32.png'));
+
+app.use('/favicon.ico', express.static('public/favicon.ico'));
 
 app.get('/', (req, res) => {
   res.render('index', {layout: 'main'});

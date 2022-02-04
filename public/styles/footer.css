@@ -1,0 +1,29 @@
+#footer-wrapper {
+  position: relative;
+  margin-top: 200px;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  width: 40%;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  align-items: stretch;
+
+}
+
+footer > * {
+  width: 50%;
+}
+
+footer > ul {
+  list-style: none;
+}
+
+footer > p {
+  text-align: right;
+}
