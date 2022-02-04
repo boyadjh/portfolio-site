@@ -1,0 +1,287 @@
+:root {
+  --box-color: #fff;
+  --bg: #03061F;
+  --bg-light: #901247;
+  --accent-blue: #020068;
+  --accent: #9e0144;
+}
+
+html, body {
+  background-color: #aaa;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: white;
+  font-family: monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+nav > ul {
+  list-style: none;
+}
+
+nav > ul > li {
+  display: inline;
+  margin: 0 20px;
+  font-variant: small-caps;
+  font-size: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+nav a:hover::after {
+  content: ' ';
+  position: absolute;
+  height: 2px;
+  left: 5px;
+  right: 5px;
+  bottom: 0px;
+  background-color: white;
+}
+
+#index-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  width: 100%;
+  height: 50vh;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero0 {
+  background-image: url('hero0.jpg');
+}
+
+.hero1 {
+  background-image: url('hero1.jpg');
+}
+
+.hero2 {
+  background-image: url('hero2.jpg');
+}
+
+.hero3 {
+  background-image: url('about/photo2.jpg');
+  background-position: bottom;
+}
+
+.hero-about {
+  height: 60vh !important;
+  background-image: url('about/photo2.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  animation: 4s glitch 2;
+}
+
+@keyframes "glitch" {
+  from {
+    background-image: url('about/photo2.jpg');
+  }
+  85% {
+    background-image: url('about/photo2.jpg');
+  }
+  86% {
+    background-image: url('about/glitch/glitch2.png');
+  }
+  92% {
+    background-image: url('about/glitch/glitch1.png');
+  }
+  98% {
+    background-image: url('about/glitch/glitch3.png');
+  }
+}
+
+.dotdotdot {
+  font-size: .8em;
+  font-weight: normal;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+.hero h1 {
+  font-variant:small-caps;
+  position: absolute;
+  right: 50%;
+  top: 45%;
+  margin-top: 100px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.hero h1::after {
+  content: '|';
+  position: absolute;
+  right: -20px;
+  font-weight: normal;
+  font-size: .9em;
+  animation: 1s blink step-end infinite;
+}
+
+#blog-preview {
+  position: relative;
+  height: 50vh;
+  margin: 50px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blog-preview aside {
+  font-variant: small-caps;
+  font-size: 30px;
+  margin-right: 10px;
+  text-align: right;
+  width: 80px;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  margin: 5px;
+  border: 2px solid var(--box-color);
+  z-index: 1;
+}
+
+.box::after {
+  content: ' ';
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+  border: 2px solid var(--box-color);
+  z-index: -1;
+}
+
+.blog-post {
+  font-size: 14px;
+  z-index: 1;
+}
+
+#projects-preview {
+  position: relative;
+  width: 100%;
+  margin-top: 10vh;
+}
+
+#projects-preview::after {
+  content: ' ';
+  position: absolute;
+  height: 5px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-image: url('glitch_banner.png');
+}
+
+#projects-preview > span {
+  display: block;
+  font-size: 40px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-image: url('glitch_banner.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.project-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-badge {
+  width: 25%;
+  height: 50vw;
+  transition: filter .2s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(40%);
+}
+
+.project-badge:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+.project-1:hover {
+  filter: brightness(60%);
+}
+
+.project-1 {
+  background-image: url('projects/asozi8.png');
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.project-title {
+  display: none;
+}
+
+#footer-wrapper {
+  position: relative;
+  margin-top: 200px;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  width: 40%;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  align-items: stretch;
+
+}
+
+footer > * {
+  width: 50%;
+}
+
+footer > ul {
+  list-style: none;
+}
+
+footer > p {
+  text-align: right;
+}
