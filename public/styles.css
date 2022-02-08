@@ -73,8 +73,6 @@ html, body {
   animation: 1s blink step-end infinite;
 }
 
-
-
 .blog-post {
   font-size: 14px;
   z-index: 1;
@@ -84,13 +82,14 @@ html, body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
 }
 
 .project-badge {
-  width: 25%;
-  height: 50vw;
-  transition: filter .2s;
+  width: 100%;
+  height: 100px;
+  transition: filter .1s;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -98,17 +97,17 @@ html, body {
 }
 
 .project-badge:not(:last-child) {
-  border-right: 2px solid black;
+  border-bottom: 2px solid white;
 }
 
 .project-1:hover {
-  filter: brightness(60%);
+  filter: brightness(80%);
 }
 
 .project-1 {
-  background-image: url('img/project-asozi8.png');
-  background-position: center;
-  background-size: auto 100%;
+  background-image: url('img/project-banners/asozi8.jpg');
+  background-position: top;
+  background-size: cover;
 }
 
 .project-title {

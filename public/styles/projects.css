@@ -5,3 +5,13 @@
 .hero-projects {
   background-image: var(--projects-hero);
 }
+
+.page-content {
+  margin-top: 50px;
+}
+
+.project-1 {
+  background-image: url('img/project-banners/asozi8.jpg');
+  background-position: top;
+  background-size: cover;
+}

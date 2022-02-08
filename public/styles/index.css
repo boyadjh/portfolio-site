@@ -28,26 +28,25 @@
 #projects-preview {
   position: relative;
   width: 100%;
-  margin-top: 10vh;
 }
 
 #projects-preview::after {
   content: ' ';
   position: absolute;
-  height: 5px;
+  height: 15px;
   top: 100%;
   left: 0;
   right: 0;
-  background-image: url('../img/glitch_banner.png');
+  /* background-image: url('../img/glitch-banner.png'); */
 }
 
 #projects-preview > span {
   display: block;
   font-size: 40px;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  background-image: url('../img/glitch_banner.png');
+  background-image: url('../img/glitch-banner.jpg');
   background-size: cover;
   background-position: center;
 }
