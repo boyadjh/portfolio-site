@@ -47,3 +47,21 @@
 .hero-about h1::after {
   right: 0 !important;
 }
+
+.about {
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 800px;
+}
+
+.about > img {
+  height: 300px;
+}
+
+.about p {
+  margin: 10px;
+  font-size: 18px;
+}
