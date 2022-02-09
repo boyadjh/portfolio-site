@@ -10,6 +10,7 @@
 
 .intro {
   position: absolute;
+  margin-left: 15px;
   left: 50%;
   bottom: 50px;
   border: 2px solid white;
