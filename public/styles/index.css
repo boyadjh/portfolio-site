@@ -8,6 +8,22 @@
   background-image: url('../img/index-hero.jpg');
 }
 
+.intro {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  border: 2px solid white;
+  padding: 10px;
+}
+
+.intro h2 {
+  font-size: 20px;
+}
+
+.intro p {
+  font-size: 15px;
+}
+
 #blog-preview {
   position: relative;
   height: 50vh;

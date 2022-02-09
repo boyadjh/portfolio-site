@@ -2,6 +2,9 @@ const express = require('express');
 const favicon = require('express-favicon');
 const handlebars = require('express-handlebars');
 
+const path = require('path');
+const fs = require('fs');
+
 const port = 3000;
 
 const app = express();
@@ -24,7 +27,21 @@ app.get('/', (req, res) => {
 });
 
 app.get('/blog', (req, res) => {
-  res.render('blog', {layout: 'main'});
+  res.render('blog', {
+    layout: 'main',
+    helpers: {
+      foo() {return ['a', 'b', 'c', 'd']},
+      getBlogs() {
+        fs.readdir(path.join(__dirname, 'views/partials/blogs'), (err, files) => {
+          if(err) {
+            return console.log('Error getting blog posts: ' + err);
+          }
+          console.log(files);
+          return files;
+        })
+      }
+    }
+  });
 });
 
 app.get('/projects', (req, res) => {
